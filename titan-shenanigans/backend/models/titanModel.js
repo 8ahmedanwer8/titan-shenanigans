@@ -10,25 +10,27 @@ const titanSchema = new Schema(
       trim: true,
       minlength: 3,
     },
+    abilities: {
+      type: String,
+      minlength: 3,
+    },
     height: {
       type: Number,
       required: true,
       trim: true,
     },
     currentHost: {
-      type: String,
-      required: true,
-      minlength: 2,
-      trim: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Human",
     },
     pic: {
-      type: "String",
-      required: true,
-      default:
-        "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+      type: String,
+      default: "./assets/isayama.png",
     },
   },
   {
     timestamps: true,
   }
 );
+const Titan = mongoose.model("Titan", titanSchema);
+module.exports = Titan;
