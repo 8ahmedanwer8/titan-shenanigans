@@ -5,13 +5,13 @@ const connectDB = require("./config");
 
 const humansRouter = require("./routes/humans");
 const titansRouter = require("./routes/titans");
-console.log(connectDB, titansRouter);
 db = connectDB();
 
 const app = express();
+app.use(express.json());
 const port = process.env.PORT || 5000;
 
 app.listen(port, console.log(`SUPPPP  from ${port}`));
 
-// app.use("/humans", humansRouter);
-// app.use("/titansRouter", titansRouter);
+app.use("/humans", humansRouter);
+app.use("/titans", titansRouter);
