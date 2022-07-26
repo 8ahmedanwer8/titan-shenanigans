@@ -9,7 +9,7 @@ router.route("/").get((req, res) => {
 
 router.post("/add", (req, res) => {
   const name = req.body.name;
-  const age = 21;
+  const age = req.body.age;
   const pic = req.body.pic;
   newHuman = new Human({ name, age, pic });
   newHuman
