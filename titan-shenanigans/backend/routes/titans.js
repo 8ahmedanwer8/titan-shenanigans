@@ -2,6 +2,7 @@ const router = require("express").Router();
 let Titan = require("../models/titanModel");
 
 router.route("/").get((req, res) => {
+  console.log("GET IS CALLLED");
   Titan.find() //find is a mongoose method that gets list of all Humans and returns a promise
     .then((titans) => res.json(titans))
     .catch((err) => res.status(400).json("Error: " + err));
