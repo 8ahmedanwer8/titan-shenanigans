@@ -5,7 +5,6 @@ const connectDB = require("./config");
 
 const humansRouter = require("./routes/humans");
 const titansRouter = require("./routes/titans");
-const chatRoutes = require("./routes/chats");
 
 db = connectDB();
 
@@ -20,4 +19,3 @@ app.get("/", (req, res) => {
 });
 app.use("/humans", humansRouter);
 app.use("/titans", titansRouter);
-app.use("/api/chat", chatRoutes);

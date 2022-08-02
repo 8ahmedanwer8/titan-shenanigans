@@ -1,10 +1,10 @@
 import { Route } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Bruh";
-import updateHuman from "./pages/updateHuman";
-import titans from "./pages/titans";
-import humans from "./pages/humans";
-import updateTitan from "./pages/updateTitan";
+import Home from "./pages/Home";
+import updateHuman from "./pages/UpdateHuman";
+import titans from "./pages/Titans";
+import humans from "./pages/Humans";
+import updateTitan from "./pages/UpdateTitan";
 import CreateTitan from "./pages/CreateTitan";
 import CreateHuman from "./pages/CreateHuman";
 
@@ -16,8 +16,8 @@ function App() {
       <Route path="/humans/:id" component={updateHuman} />
       <Route path="/titans" component={titans} exact />
       <Route path="/titans/:id" component={updateTitan} />
-      <Route path="/createTitan" component={CreateTitan} />
-      <Route path="/createHuman" component={CreateHuman} />
+      <Route path="/createTitan" component={CreateTitan} exact />
+      <Route path="/createHuman" component={CreateHuman} exact />
     </div>
   );
 }
