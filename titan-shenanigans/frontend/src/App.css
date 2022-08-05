@@ -4,6 +4,36 @@
   display: flex;
   background-size: cover;
   min-height: 100vh;
-  background-image: url("../assets/background2.jpg");
+  background-image: url("./assets/background.jpg");
   background-position: center;
 }
+
+/***Carousel***/
+
+/* square buttons */
+.rec.rec-arrow {
+  border-radius: 50%;
+  background-color: white;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+  border-radius: 50%;
+  color: gray;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+  color: gray;
+  opacity: 0.5;
+}
+
+.rec.rec-carousel {
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+}
+
+.rec-carousel-item {
+  /* background-color: black; */
+  width: 220px;
+}
+/***Carousel***/

@@ -34,12 +34,12 @@ const Home = () => {
           Titan Shenanigans
         </Text>
       </Box>
-      <Box>
+      <Container>
         <TitansCarousel />
-      </Box>
-      <Box>
+      </Container>
+      <Container>
         <HumansCarousel />
-      </Box>
+      </Container>
     </Container>
   );
   //   return (
